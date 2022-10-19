@@ -2,8 +2,6 @@ import user from '../user.json'
 import Profile from './Profile'
 import data from '../data.json'
 import StatisticList from './StatisticsList'
-import Statistics from "./Stastics"
-
 
 export default function App () {
   return (

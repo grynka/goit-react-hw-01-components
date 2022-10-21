@@ -103,3 +103,21 @@ code {
 .percentage {
   font-size: 20px;
 }
+
+.friend-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.status {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: green;
+}
+

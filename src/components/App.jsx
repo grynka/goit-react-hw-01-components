@@ -4,6 +4,8 @@ import data from '../data.json'
 import Statistics from './Stastics'
 import FriendList from './FriendList'
 import friends from '../friends.json'
+import TransactionHistory from './TransactionHistory'
+import transactions from '../transactions.json'
 
 export default function App () {
   return (
@@ -13,11 +15,9 @@ export default function App () {
       location={user.location}
       avatar={user.avatar}
       stats={user.stats} />
-<Statistics 
- items={data} />
-
-      <FriendList  
-      items={friends} />
+<Statistics items={data} />
+      <FriendList items={friends} />
+            <TransactionHistory items={transactions} />
         </div>
 
 

@@ -1,35 +1,16 @@
-import FriendList from "./FriendList.styled";
+import {Friends, Status, Item} from "./FriendList.styled";
 
-const ofline = {
-  display: "block",
-  width: 10,
-  height: 10,
-  borderRadius: "50%",
-  backgroundColor: "red", 
-  margin: "0 15px"
-};
-
-const online = {
-  display: "block",
-  width: 10,
-  height: 10,
-  borderRadius: "50%",
-  backgroundColor: "green", 
-  margin: "0 15px"
-};
-
-function FriendList({ items }) {
+export function FriendList({ items }) {
     return (
-      <ul className="friend-list">
+      <Friends>
     {items.map(item =>
-<li className="item" key={item.id}>
-  <span className="status" style={item.isOnline ? online : ofline} ></span>
+<Item key={item.id}>
+  <Status type={item.isOnline.toString()}></Status>
   <img className="avatar" src={item.avatar} alt="User avatar" width="48" />
   <p className="name">{item.name}</p>
-</li>)}
+</Item>)}
 
-</ul>);
+</Friends>);
 }
 
 
-export default FriendList

@@ -1,3 +1,5 @@
+import FriendList from "./FriendList.styled";
+
 const ofline = {
   display: "block",
   width: 10,

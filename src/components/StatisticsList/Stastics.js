@@ -11,7 +11,10 @@ import PropTypes from 'prop-types';
 export function Statistics({ stats, title}) {
   return (
     <Statistic>
-      <Title>{title}</Title>
+    {title 
+     ? <Title>{title}</Title>
+     : null
+    }
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatItem key={id} style={{ backgroundColor: getRandomHexColor() }}>

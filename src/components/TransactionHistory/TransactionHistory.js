@@ -1,4 +1,4 @@
-import { Transaction, Thead, RowGray } from './TransactionHistory.styled';
+import { Transaction, Thead, RowGray, Col } from './TransactionHistory.styled';
 import PropTypes from 'prop-types';
 
 export function TransactionHistory({ items }) {
@@ -15,13 +15,9 @@ export function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
           <RowGray key={id}>
-            <td style={{ paddingLeft: 110, width: '33%' }}>{type}</td>
-            <td style={{ paddingLeft: 0, width: '33%', textAlign: 'center' }}>
-              {amount}
-            </td>
-            <td style={{ paddingLeft: 0, width: '33%', textAlign: 'center' }}>
-              {currency}
-            </td>
+            <Col>{type}</Col>
+            <Col>{amount}</Col>
+            <Col>{currency}</Col>
           </RowGray>
         ))}
       </tbody>
@@ -30,8 +26,6 @@ export function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string,
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.string,
+  items: PropTypes.array,
+
 };

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function FriendListItem({item : { isOnline, avatar, name }}) {
   return (
         <>
-          <Status type={isOnline.toString()}></Status>
+          <Status type = {isOnline.toString()} />
           <img className="avatar" src={avatar} alt="User avatar" width="48" />
           <p className="name">{name}</p>
           </>

@@ -15,16 +15,7 @@ export const Status = styled.span`
   height: 10px;
   border-radius: 50%;
   margin: 0 15px;
-  background-color: ${props => {
-    switch (props.type) {
-      case 'true':
-        return 'green';
-      case 'false':
-        return 'red';
-      default:
-        return;
-    }
-  }};
+  background-color: ${props => props.type === 'true' ? 'green' : 'red'}
 `;
 
 export const Item = styled.li`

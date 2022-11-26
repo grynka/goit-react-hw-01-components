@@ -22,3 +22,8 @@ export const RowGray = styled.tr`
     background-color: #f2f2f2;
   }
 `;
+
+export const Col = styled.td`
+width: 33%;
+text-align: center;
+`;

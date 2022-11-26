@@ -8,12 +8,12 @@ import {
 } from './Statistics.styled';
 import PropTypes from 'prop-types';
 
-export function Statistics({ items }) {
+export function Statistics({ stats, title}) {
   return (
     <Statistic>
-      <Title>Upload stats</Title>
+      <Title>{title}</Title>
       <StatList>
-        {items.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage }) => (
           <StatItem key={id} style={{ backgroundColor: getRandomHexColor() }}>
             <Label>{label}</Label>
             <Percentage>{percentage}%</Percentage>

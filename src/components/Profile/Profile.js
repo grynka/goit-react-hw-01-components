@@ -10,28 +10,28 @@ import {
 } from './Profile.styled';
 import PropTypes from 'prop-types';
 
-export function Profile(props) {
+export function Profile({avatar, username, tag, location, stats : { followers, views, likes }}) {
   return (
     <Profiles>
       <Description>
-        <Avatar src={props.avatar} alt="User avatar" />
-        <Name>{props.username}</Name>
-        <p className="tag">{props.tag}</p>
-        <p className="location">{props.location}</p>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <p className="tag">{tag}</p>
+        <p className="location">{location}</p>
       </Description>
 
       <Stats>
         <StatsLi>
           <Label>Followers</Label>
-          <Quantity>{props.stats.followers}</Quantity>
+          <Quantity>{followers}</Quantity>
         </StatsLi>
         <StatsLi>
           <Label>Views</Label>
-          <Quantity>{props.stats.views}</Quantity>
+          <Quantity>{views}</Quantity>
         </StatsLi>
         <StatsLi>
           <Label>Likes</Label>
-          <Quantity>{props.stats.likes}</Quantity>
+          <Quantity>{likes}</Quantity>
         </StatsLi>
       </Stats>
     </Profiles>
@@ -43,7 +43,5 @@ Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  stats: PropTypes.object
 };

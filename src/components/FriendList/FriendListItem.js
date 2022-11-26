@@ -12,7 +12,5 @@ export function FriendListItem({item : { isOnline, avatar, name }}) {
 }
 
 FriendListItem.propTypes = {
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
+  item: PropTypes.object,
 };

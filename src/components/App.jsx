@@ -21,7 +21,7 @@ export default function App() {
       <Statistics title
         stats={data}
       />
-      <FriendList items={friends} />
+      <FriendList lists = {friends} />
       <TransactionHistory items={transactions} />
     </>
   );

@@ -8,7 +8,7 @@ import {
 } from './Statistics.styled';
 import PropTypes from 'prop-types';
 
-export function Statistics({ stats, title}) {
+export function Statistics({ stats, title }) {
   return (
     <Statistic>
     {title 
@@ -33,7 +33,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-Statistics.propTypes = {
-  stats: PropTypes.array,
+Statistics.propTypes={
+  stats: PropTypes.shape({
+    id: PropTypes.number,
+    label: PropTypes.string,
+    percentage: PropTypes.number
+  }),
   title: PropTypes.string,
 };
